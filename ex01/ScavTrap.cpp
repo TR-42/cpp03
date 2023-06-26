@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 22:25:13 by kfujita           #+#    #+#             */
-/*   Updated: 2023/06/26 23:52:32 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/06/27 00:01:44 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,9 @@ ScavTrap::~ScavTrap()
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &from)
 {
-	this->attackDamage = from.attackDamage;
-	this->energyPoints = from.energyPoints;
-	this->name = from.name;
-	this->points = from.points;
+	this->ClapTrap::operator=(from);
+
+	std::cout << PROG_NAME " assignment operator called" << std::endl;
 
 	return *this;
 }

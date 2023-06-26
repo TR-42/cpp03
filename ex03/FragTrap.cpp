@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 22:25:13 by kfujita           #+#    #+#             */
-/*   Updated: 2023/06/26 23:52:44 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/06/27 00:01:56 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,9 @@ FragTrap::~FragTrap()
 
 FragTrap &FragTrap::operator=(const FragTrap &from)
 {
-	this->attackDamage = from.attackDamage;
-	this->energyPoints = from.energyPoints;
-	this->name = from.name;
-	this->points = from.points;
+	this->ClapTrap::operator=(from);
+
+	std::cout << PROG_NAME " assignment operator called" << std::endl;
 
 	return *this;
 }
