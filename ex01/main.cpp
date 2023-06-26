@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 19:52:47 by kfujita           #+#    #+#             */
-/*   Updated: 2023/06/26 22:55:01 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/06/26 23:07:08 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ int main(void)
 	ScavTrap v;
 	std::cout << std::endl << "// " << __FILE__ << ':' << __LINE__ << std::endl << std::endl;
 	ClapTrap n(v);
-	std::cout << std::endl << "// " << __FILE__ << ':' << __LINE__ << std::endl << std::endl;
-	ScavTrap m("Sun");
 	std::cout << std::endl << "// " << __FILE__ << ':' << __LINE__ << std::endl << std::endl;
 
 	v.attack("abc");
@@ -36,11 +34,16 @@ int main(void)
 
 	std::cout << std::endl << "// " << __FILE__ << ':' << __LINE__ << std::endl << std::endl;
 
-	m.attack("abc");
-	m.takeDamage(5);
-	m.beRepaired(8);
-	m.beRepaired(16);
-	m.guardGate();
+	{
+		ScavTrap m("Sun");
+		std::cout << std::endl << "// " << __FILE__ << ':' << __LINE__ << std::endl << std::endl;
+		
+		m.attack("abc");
+		m.takeDamage(5);
+		m.beRepaired(8);
+		m.beRepaired(16);
+		m.guardGate();
+	}
 
 	std::cout << std::endl << "// " << __FILE__ << ':' << __LINE__ << std::endl << std::endl;
 
