@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 19:38:48 by kfujita           #+#    #+#             */
-/*   Updated: 2023/06/26 22:20:08 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/06/26 22:53:25 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &from)
 	this->name = from.name;
 	this->points = from.points;
 
+	std::cout << "ClapTrap assignment operator called" << std::endl;
+
 	return *this;
 }
 
@@ -61,7 +63,7 @@ void ClapTrap::attack(const std::string &target)
 {
 	if (this->energyPoints <= 0)
 	{
-		std::cout << "ERR: Not enough enegy points" << std::endl;
+		std::cout << "ERR: Not enough enegy points (ClapTrap(" << this->name << ")::attack(" << target << "))" << std::endl;
 		return;
 	}
 	std::cout
@@ -79,18 +81,27 @@ void ClapTrap::takeDamage(unsigned int amount)
 		this->points -= amount;
 	else
 	{
-		std::cout << "ERR: cannot sub some points" << std::endl;
+		std::cout << "ERR: cannot sub some points (ClapTrap(" << this->name << ")::takeDamage(" << amount << "))" << std::endl;
 		this->points = 0;
 	}
+
+	std::cout << "ClapTrap(" << this->name << "): takeDamage(" << amount << ") -> Current Point: " << this->points << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->energyPoints <= 0)
 	{
-		std::cout << "ERR: Not enough enegy points" << std::endl;
+		std::cout << "ERR: Not enough enegy points (ClapTrap(" << this->name << ")::beRepaired(" << amount << "))" << std::endl;
 		return;
 	}
 	this->points += amount;
 	this->energyPoints--;
+
+	std::cout
+		<< "ClapTrap(" << this->name
+		<< "): beRepaired(" << amount
+		<< ") -> Current Point: " << this->points
+		<< ", Current Energy Point: " << this->energyPoints
+		<< std::endl;
 }
