@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 20:11:06 by kfujita           #+#    #+#             */
-/*   Updated: 2023/06/26 22:39:11 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/06/26 23:52:27 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ public:
 	ScavTrap& operator=(const ScavTrap& from);
 
 	void attack(const std::string& target);
-	void guardGate();
+	void guardGate() const;
 };

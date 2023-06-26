@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 22:25:13 by kfujita           #+#    #+#             */
-/*   Updated: 2023/06/26 22:40:51 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/06/26 23:52:32 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void ScavTrap::attack(const std::string &target)
 	this->energyPoints--;
 }
 
-void ScavTrap::guardGate()
+void ScavTrap::guardGate() const
 {
 	std::cout
 		<< PROG_NAME " " << this->name

@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 22:25:13 by kfujita           #+#    #+#             */
-/*   Updated: 2023/06/26 23:15:39 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/06/26 23:52:44 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void FragTrap::attack(const std::string &target)
 	this->energyPoints--;
 }
 
-void FragTrap::highFiveGuys()
+void FragTrap::highFiveGuys() const
 {
 	std::cout
 		<< PROG_NAME " " << this->name
