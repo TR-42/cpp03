@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 22:25:13 by kfujita           #+#    #+#             */
-/*   Updated: 2023/06/27 00:01:56 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/06/27 00:05:56 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,22 +55,6 @@ FragTrap &FragTrap::operator=(const FragTrap &from)
 	std::cout << PROG_NAME " assignment operator called" << std::endl;
 
 	return *this;
-}
-
-void FragTrap::attack(const std::string &target)
-{
-	if (this->energyPoints <= 0)
-	{
-		std::cout << "ERR: Not enough enegy points" << std::endl;
-		return;
-	}
-	std::cout
-		<< PROG_NAME " " << this->name
-		<< " attacks " << target
-		<< ", causing " << this->attackDamage
-		<< " points of damage!"
-		<< std::endl;
-	this->energyPoints--;
 }
 
 void FragTrap::highFiveGuys() const

@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 20:11:06 by kfujita           #+#    #+#             */
-/*   Updated: 2023/06/26 23:52:52 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/06/27 00:05:50 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ public:
 
 	FragTrap& operator=(const FragTrap& from);
 
-	void attack(const std::string& target);
 	void highFiveGuys() const;
 };
