@@ -11,8 +11,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main(void)
 {
@@ -49,7 +48,7 @@ int main(void)
 	std::cout << std::endl << "// " << __FILE__ << ':' << __LINE__ << std::endl << std::endl;
 
 	{
-		FragTrap m("Moon");
+		DiamondTrap m("Moon");
 		std::cout << std::endl << "// " << __FILE__ << ':' << __LINE__ << std::endl << std::endl;
 		
 		m.attack("abc");
@@ -57,6 +56,8 @@ int main(void)
 		m.beRepaired(8);
 		m.beRepaired(16);
 		m.highFiveGuys();
+		m.guardGate();
+		m.whoAmI();
 	}
 	std::cout << std::endl << "// " << __FILE__ << ':' << __LINE__ << std::endl << std::endl;
 

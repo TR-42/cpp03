@@ -15,6 +15,7 @@ NAME	:=	main
 SRCS	:= \
 	$(NAME).cpp\
 	ClapTrap.cpp\
+	DiamondTrap.cpp\
 	FragTrap.cpp\
 	ScavTrap.cpp\
 
