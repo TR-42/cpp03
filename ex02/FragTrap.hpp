@@ -22,7 +22,7 @@ public:
 	FragTrap();
 	FragTrap(const std::string& name);
 	FragTrap(const FragTrap& from);
-	~FragTrap();
+	virtual ~FragTrap();
 
 	FragTrap& operator=(const FragTrap& from);
 

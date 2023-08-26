@@ -22,7 +22,7 @@ public:
 	ScavTrap();
 	ScavTrap(const std::string& name);
 	ScavTrap(const ScavTrap& from);
-	~ScavTrap();
+	virtual ~ScavTrap();
 
 	ScavTrap& operator=(const ScavTrap& from);
 

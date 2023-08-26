@@ -30,7 +30,7 @@ public:
 	ClapTrap();
 	ClapTrap(const std::string& name);
 	ClapTrap(const ClapTrap& from);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	ClapTrap& operator=(const ClapTrap& from);
 

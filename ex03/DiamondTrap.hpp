@@ -24,7 +24,7 @@ public:
 	DiamondTrap();
 	DiamondTrap(const std::string& name);
 	DiamondTrap(const DiamondTrap& from);
-	~DiamondTrap();
+	virtual ~DiamondTrap();
 
 	DiamondTrap& operator=(const DiamondTrap& from);
 
