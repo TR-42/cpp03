@@ -37,7 +37,7 @@ ClapTrap::ClapTrap(const ClapTrap &from) :
 	name(from.name),
 	points(from.points),
 	energyPoints(from.energyPoints),
-	attackDamage(from.energyPoints)
+	attackDamage(from.attackDamage)
 {
 	std::cout << "ClapTrap copy constructor called" << std::endl;
 }
