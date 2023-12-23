@@ -17,6 +17,9 @@
 class FragTrap : public ClapTrap
 {
 private:
+	const static unsigned int DEFAULT_POINTS = 100;
+	const static unsigned int DEFAULT_ENERGY_POINTS = 100;
+	const static unsigned int DEFAULT_ATTACK_DAMAGE = 30;
 
 public:
 	FragTrap();

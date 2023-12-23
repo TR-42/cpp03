@@ -20,27 +20,27 @@ ScavTrap::ScavTrap() :
 	ClapTrap()
 {
 	std::cout << PROG_NAME " default constructor called" << std::endl;
-	this->points = 100;
-	this->energyPoints = 50;
-	this->attackDamage = 20;
+	this->points = this->DEFAULT_POINTS;
+	this->energyPoints = this->DEFAULT_ENERGY_POINTS;
+	this->attackDamage = this->DEFAULT_ATTACK_DAMAGE;
 }
 
 ScavTrap::ScavTrap(const std::string &name) :
 	ClapTrap(name)
 {
 	std::cout << PROG_NAME " constructor (with name parameter) called" << std::endl;
-	this->points = 100;
-	this->energyPoints = 50;
-	this->attackDamage = 20;
+	this->points = this->DEFAULT_POINTS;
+	this->energyPoints = this->DEFAULT_ENERGY_POINTS;
+	this->attackDamage = this->DEFAULT_ATTACK_DAMAGE;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &from) :
 	ClapTrap(from)
 {
 	std::cout << PROG_NAME " copy constructor called" << std::endl;
-	this->points = 100;
-	this->energyPoints = 50;
-	this->attackDamage = 20;
+	this->points = this->DEFAULT_POINTS;
+	this->energyPoints = this->DEFAULT_ENERGY_POINTS;
+	this->attackDamage = this->DEFAULT_ATTACK_DAMAGE;
 }
 
 ScavTrap::~ScavTrap()

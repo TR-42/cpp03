@@ -17,6 +17,9 @@
 class ScavTrap : public ClapTrap
 {
 private:
+	const static unsigned int DEFAULT_POINTS = 100;
+	const static unsigned int DEFAULT_ENERGY_POINTS = 50;
+	const static unsigned int DEFAULT_ATTACK_DAMAGE = 20;
 
 public:
 	ScavTrap();

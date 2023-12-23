@@ -20,27 +20,27 @@ FragTrap::FragTrap() :
 	ClapTrap()
 {
 	std::cout << PROG_NAME " default constructor called" << std::endl;
-	this->points = 100;
-	this->energyPoints = 100;
-	this->attackDamage = 30;
+	this->points = this->DEFAULT_POINTS;
+	this->energyPoints = this->DEFAULT_ENERGY_POINTS;
+	this->attackDamage = this->DEFAULT_ATTACK_DAMAGE;
 }
 
 FragTrap::FragTrap(const std::string &name) :
 	ClapTrap(name)
 {
 	std::cout << PROG_NAME " constructor (with name parameter) called" << std::endl;
-	this->points = 100;
-	this->energyPoints = 100;
-	this->attackDamage = 30;
+	this->points = this->DEFAULT_POINTS;
+	this->energyPoints = this->DEFAULT_ENERGY_POINTS;
+	this->attackDamage = this->DEFAULT_ATTACK_DAMAGE;
 }
 
 FragTrap::FragTrap(const FragTrap &from) :
 	ClapTrap(from)
 {
 	std::cout << PROG_NAME " copy constructor called" << std::endl;
-	this->points = 100;
-	this->energyPoints = 100;
-	this->attackDamage = 30;
+	this->points = this->DEFAULT_POINTS;
+	this->energyPoints = this->DEFAULT_ENERGY_POINTS;
+	this->attackDamage = this->DEFAULT_ATTACK_DAMAGE;
 }
 
 FragTrap::~FragTrap()
