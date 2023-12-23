@@ -19,9 +19,12 @@
 
 DiamondTrap::DiamondTrap() :
 	FragTrap(),
-	ScavTrap()
+	ScavTrap(),
+	name("")
 {
 	std::cout << PROG_NAME " default constructor called" << std::endl;
+
+	this->ClapTrap::name = name + NAME_SUFFIX;
 	this->points = this->FragTrap::DEFAULT_POINTS;
 	this->energyPoints = this->ScavTrap::DEFAULT_ENERGY_POINTS;
 	this->attackDamage = this->FragTrap::DEFAULT_ATTACK_DAMAGE;
