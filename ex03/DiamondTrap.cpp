@@ -71,7 +71,7 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &from)
 
 void DiamondTrap::attack(const std::string &target)
 {
-	this->FragTrap::attack(target);
+	this->ScavTrap::attack(target);
 }
 
 void DiamondTrap::whoAmI() const
