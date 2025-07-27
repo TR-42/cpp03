@@ -17,9 +17,9 @@
 class FragTrap : public virtual ClapTrap
 {
 protected:
-	const static unsigned int DEFAULT_POINTS = 100;
-	const static unsigned int DEFAULT_ENERGY_POINTS = 100;
-	const static unsigned int DEFAULT_ATTACK_DAMAGE = 30;
+	static const unsigned int DEFAULT_POINTS = 100;
+	static const unsigned int DEFAULT_ENERGY_POINTS = 100;
+	static const unsigned int DEFAULT_ATTACK_DAMAGE = 30;
 
 public:
 	FragTrap();

@@ -17,9 +17,9 @@
 class ClapTrap
 {
 protected:
-	const static unsigned int DEFAULT_POINTS = 10;
-	const static unsigned int DEFAULT_ENERGY_POINTS = 10;
-	const static unsigned int DEFAULT_ATTACK_DAMAGE = 0;
+	static const unsigned int DEFAULT_POINTS = 10;
+	static const unsigned int DEFAULT_ENERGY_POINTS = 10;
+	static const unsigned int DEFAULT_ATTACK_DAMAGE = 0;
 
 	std::string name;
 	unsigned int points;
