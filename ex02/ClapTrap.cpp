@@ -84,7 +84,14 @@ void ClapTrap::takeDamage(unsigned int amount)
 	}
 	else
 	{
-		std::cout << "ERR: cannot sub some points (ClapTrap(" << this->name << ")::takeDamage(" << amount << "))" << std::endl;
+		std::cout
+			<< "ERR: cannot sub some points (ClapTrap("
+			<< this->name
+			<< ")::takeDamage("
+			<< amount
+			<< ")) -> affected: "
+			<< amount
+			<< std::endl;
 		this->points = 0;
 	}
 }
@@ -96,8 +103,24 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "ERR: Not enough energy points (ClapTrap(" << this->name << ")::beRepaired(" << amount << "))" << std::endl;
 		return;
 	}
-	this->points += amount;
 	this->energyPoints--;
+	if (this->DEFAULT_POINTS < amount + this->points)
+	{
+		int affected = this->points + amount - this->DEFAULT_POINTS;
+		std::cout
+			<< "ERR: cannot add some points (ClapTrap("
+			<< this->name
+			<< ")::beRepaired("
+			<< amount
+			<< ")) -> affected: "
+			<< affected
+			<< ", Energy Points: "
+			<< this->energyPoints
+			<< std::endl;
+		this->points = this->DEFAULT_POINTS;
+		return;
+	}
+	this->points += amount;
 
 	std::cout
 		<< "ClapTrap(" << this->name
