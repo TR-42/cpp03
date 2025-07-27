@@ -61,7 +61,7 @@ void ScavTrap::attack(const std::string &target)
 {
 	if (this->energyPoints <= 0)
 	{
-		std::cout << "ERR: Not enough enegy points" << std::endl;
+		std::cout << "ERR: Not enough energy points" << std::endl;
 		return;
 	}
 	std::cout

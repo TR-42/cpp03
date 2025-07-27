@@ -63,7 +63,7 @@ void ClapTrap::attack(const std::string &target)
 {
 	if (this->energyPoints <= 0)
 	{
-		std::cout << "ERR: Not enough enegy points (ClapTrap(" << this->name << ")::attack(" << target << "))" << std::endl;
+		std::cout << "ERR: Not enough energy points (ClapTrap(" << this->name << ")::attack(" << target << "))" << std::endl;
 		return;
 	}
 	std::cout
@@ -78,21 +78,22 @@ void ClapTrap::attack(const std::string &target)
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (amount <= this->points)
+	{
+		std::cout << "ClapTrap(" << this->name << "): takeDamage(" << amount << ") -> Current Point: " << this->points << std::endl;
 		this->points -= amount;
+	}
 	else
 	{
 		std::cout << "ERR: cannot sub some points (ClapTrap(" << this->name << ")::takeDamage(" << amount << "))" << std::endl;
 		this->points = 0;
 	}
-
-	std::cout << "ClapTrap(" << this->name << "): takeDamage(" << amount << ") -> Current Point: " << this->points << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->energyPoints <= 0)
 	{
-		std::cout << "ERR: Not enough enegy points (ClapTrap(" << this->name << ")::beRepaired(" << amount << "))" << std::endl;
+		std::cout << "ERR: Not enough energy points (ClapTrap(" << this->name << ")::beRepaired(" << amount << "))" << std::endl;
 		return;
 	}
 	this->points += amount;
