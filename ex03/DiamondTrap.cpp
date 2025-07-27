@@ -87,3 +87,8 @@ void DiamondTrap::whoAmI() const
 		<<std::endl
 		;
 }
+
+unsigned int DiamondTrap::getDefaultPoints() const
+{
+	return this->FragTrap::getDefaultPoints();
+}

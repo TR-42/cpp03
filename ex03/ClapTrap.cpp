@@ -79,8 +79,8 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (amount <= this->points)
 	{
-		std::cout << "ClapTrap(" << this->name << "): takeDamage(" << amount << ") -> Current Point: " << this->points << std::endl;
 		this->points -= amount;
+		std::cout << "ClapTrap(" << this->name << "): takeDamage(" << amount << ") -> Current Point: " << this->points << std::endl;
 	}
 	else
 	{
@@ -90,7 +90,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 			<< ")::takeDamage("
 			<< amount
 			<< ")) -> affected: "
-			<< amount
+			<< this->points
 			<< std::endl;
 		this->points = 0;
 	}
@@ -104,9 +104,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 		return;
 	}
 	this->energyPoints--;
-	if (this->DEFAULT_POINTS < amount + this->points)
+	if (this->getDefaultPoints() < this->points + amount)
 	{
-		int affected = this->points + amount - this->DEFAULT_POINTS;
+		int affected = this->getDefaultPoints() - this->points;
 		std::cout
 			<< "ERR: cannot add some points (ClapTrap("
 			<< this->name
@@ -117,7 +117,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 			<< ", Energy Points: "
 			<< this->energyPoints
 			<< std::endl;
-		this->points = this->DEFAULT_POINTS;
+		this->points = this->getDefaultPoints();
 		return;
 	}
 	this->points += amount;
@@ -128,4 +128,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 		<< ") -> Current Point: " << this->points
 		<< ", Current Energy Point: " << this->energyPoints
 		<< std::endl;
+}
+
+unsigned int ClapTrap::getDefaultPoints() const
+{
+	return this->DEFAULT_POINTS;
 }

@@ -79,3 +79,8 @@ void ScavTrap::guardGate() const
 		<< PROG_NAME " " << this->name
 		<< ": Now in Gate keeper mode!" << std::endl;
 }
+
+unsigned int ScavTrap::getDefaultPoints() const
+{
+	return this->DEFAULT_POINTS;
+}

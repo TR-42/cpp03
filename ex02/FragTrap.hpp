@@ -30,4 +30,6 @@ public:
 	FragTrap& operator=(const FragTrap& from);
 
 	void highFiveGuys() const;
+
+	virtual unsigned int getDefaultPoints() const;
 };

@@ -63,3 +63,8 @@ void FragTrap::highFiveGuys() const
 		<< PROG_NAME " " << this->name
 		<< ": Requests positive high fives" << std::endl;
 }
+
+unsigned int ClapTrap::getDefaultPoints() const
+{
+	return this->DEFAULT_POINTS;
+}

@@ -6,7 +6,7 @@
 /*   By: kfujita <kfujita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 19:33:02 by kfujita           #+#    #+#             */
-/*   Updated: 2023/06/26 22:57:47 by kfujita          ###   ########.fr       */
+/*   Updated: 2023/06/26 22:19:08 by kfujita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,6 @@ public:
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
+
+	virtual unsigned int getDefaultPoints() const;
 };

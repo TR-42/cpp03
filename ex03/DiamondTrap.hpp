@@ -31,4 +31,6 @@ public:
 	void attack(const std::string& target);
 
 	void whoAmI() const;
+
+	virtual unsigned int getDefaultPoints() const;
 };
