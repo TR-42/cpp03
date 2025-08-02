@@ -107,6 +107,10 @@ void ClapTrap::beRepaired(unsigned int amount)
 	if (this->getDefaultPoints() < this->points + amount)
 	{
 		int affected = this->getDefaultPoints() - this->points;
+		if (affected < 0)
+		{
+			affected = 0;
+		}
 		std::cout
 			<< "ERR: cannot add some points (ClapTrap("
 			<< this->name
