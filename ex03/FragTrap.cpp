@@ -64,7 +64,7 @@ void FragTrap::highFiveGuys() const
 		<< ": Requests positive high fives" << std::endl;
 }
 
-unsigned int ClapTrap::getDefaultPoints() const
+unsigned int FragTrap::getDefaultPoints() const
 {
 	return this->DEFAULT_POINTS;
 }
